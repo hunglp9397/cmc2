@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: root
+    password: 123456789
+    url: jdbc:mysql://localhost:3306/db_test_dev
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: remote
+    port: 7090

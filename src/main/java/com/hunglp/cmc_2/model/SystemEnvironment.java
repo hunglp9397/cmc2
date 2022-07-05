@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class SystemEnvironment {
 
     @Value("#{systemEnvironment['JAVA_HOME']}")
-
     private String javaHome;
 
 

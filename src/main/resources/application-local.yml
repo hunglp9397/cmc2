@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    username: root
+    password: 123456789
+    url: jdbc:mysql://localhost:3306/db_cmc2
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: localhost
+    port: 6379

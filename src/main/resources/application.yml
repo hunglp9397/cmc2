@@ -1,0 +1,14 @@
+#application.yml
+---
+spring.profiles. : common, local
+spring:
+  config:
+    activate:
+      on-profile:
+---
+spring.profiles.include: common, aws
+spring:
+  config:
+    activate:
+      on-profile:
+---
