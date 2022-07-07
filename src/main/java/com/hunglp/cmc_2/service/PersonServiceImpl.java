@@ -40,5 +40,10 @@ public class PersonServiceImpl implements PersonService {
         return null;
     }
 
+    @Override
+    public Page<Person> findAll( Pageable pageable) {
+        return personRepository.findAll(pageable);
+    }
+
 
 }

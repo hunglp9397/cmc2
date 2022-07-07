@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Order;
@@ -38,6 +39,15 @@ public class PersonController {
 
         return Sort.Direction.ASC;
     }
+
+
+    @GetMapping("/persons2")
+    public ResponseEntity<?> getAllPerson( Pageable pagable){
+        List<Order>  orders = pagable.getSort().stream().collect(Collectors.toList());
+        return (ResponseEntity<?>) personService.findAll(PageRequest.of(pagable.getPageNumber(), pagable.getPageSize(), Sort.by(orders)));
+    }
+
+
 
     @GetMapping("/persons")
     public ResponseEntity<?> getAllPerson(

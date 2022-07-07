@@ -19,6 +19,8 @@ public interface PersonService {
 
     Page<Person> findByProperties(String name, String address, Integer age, Pageable pageable);
 
+    Page<Person> findAll(Pageable pageable);
+
 
 
 }

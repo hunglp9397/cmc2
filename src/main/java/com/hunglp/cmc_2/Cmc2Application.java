@@ -36,7 +36,7 @@ public class Cmc2Application {
         SystemEnvironment systemEnvironment = context.getBean(SystemEnvironment.class);
         systemEnvironment.getSystemVar();
 
-//        // Read bean base on Profile // Error
+        // Read bean base on Profile // Error
 //        SecurityConfig securityConfig = context.getBean(SecurityConfig.class);
 
 
