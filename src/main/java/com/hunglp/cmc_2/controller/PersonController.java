@@ -42,9 +42,8 @@ public class PersonController {
 
 
     @GetMapping("/persons2")
-    public ResponseEntity<?> getAllPerson( Pageable pagable){
-        List<Order>  orders = pagable.getSort().stream().collect(Collectors.toList());
-        return (ResponseEntity<?>) personService.findAll(PageRequest.of(pagable.getPageNumber(), pagable.getPageSize(), Sort.by(orders)));
+    public Page getAllPerson(Pageable pagable){
+        return personService.findAll(pagable);
     }
 
 
